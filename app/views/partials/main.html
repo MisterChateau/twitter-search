@@ -1,0 +1,28 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div ng-controller="search" class="col-sm-12">
+  <div class="row">
+    <div class="col-sm-12 search-box">
+      <div class="input-group"><span class="input-group-addon">Search</span>
+        <input ng-model="query" class="form-control"/>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div ng-repeat="tweet in tweets" ng-animate="animate" class="tweet-list">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="col-sm-2"><img src="{{tweet.user.profile_image_url}}"/></div>
+            <div class="col-sm-10"><span ng-bind-html="tweet.text | parseLink" class="pagination-centered"></span></div>
+            <div class="clearfix"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
