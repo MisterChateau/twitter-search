@@ -6,7 +6,8 @@ angular.module('ngTwitterApp', [
     'ngSanitize',
     'ngRoute',
     'ngTwitterApp.services',
-    'ngTwitterApp.filters'
+    'ngTwitterApp.filters',
+    'infinite-scroll'
 ])
     .config(function($routeProvider, $locationProvider) {
         $routeProvider
@@ -20,3 +21,5 @@ angular.module('ngTwitterApp', [
 
         $locationProvider.html5Mode(true);
     });
+
+angular.module('infinite-scroll').value('THROTTLE_MILLISECONDS', 1000)

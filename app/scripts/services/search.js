@@ -2,18 +2,26 @@
 
 angular.module('ngTwitterApp.services', []).
 factory('search', function($http) {
-        console.log('hello');
-        var query = function(keyword) {
+    var query = function(keyword, max_id) {
+        console.log(max_id);
+
+        if(max_id === undefined){
             return $http({
                 method: 'GET',
                 url: '/twittersearch/' + keyword
             });
         }
-            return {
-                query: function(keyword) {
-                    var result = query(keyword);
-                    console.log(result);
-                    return result;
-                }
-            }
-        });
+        else{
+            return $http({
+                method: 'GET',
+                url: '/twittersearch/' + keyword + '/' + max_id
+            });
+        }
+    }
+    return {
+        query: function(keyword, max_id) {
+            var result = query(keyword, max_id);
+            return result;
+        }
+    }
+});
