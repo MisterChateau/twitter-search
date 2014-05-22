@@ -3,8 +3,7 @@
 angular.module('ngTwitterApp.services', []).
 factory('search', function($http) {
     var query = function(keyword, max_id) {
-        console.log(max_id);
-
+        
         if(max_id === undefined){
             return $http({
                 method: 'GET',

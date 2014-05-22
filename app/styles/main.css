@@ -3,16 +3,14 @@
     min-height: 1000px;
     background: rgb(213, 31, 94);
     /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #52EDC7 0%, #5AC8FB 46%, #5AC8FB 47%);
     /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #52EDC7), color-stop(46%, #5AC8FB), color-stop(47%, #5AC8FB));
     /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(-45deg, #52EDC7 0%, #5AC8FB 46%, #5AC8FB 47%);
     /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-45deg, #52EDC7 0%, #5AC8FB 46%, #5AC8FB 47%);
     /* Opera 11.10+ */
-    background: -ms-linear-gradient(-45deg, #52EDC7 0%, #5AC8FB 46%, #5AC8FB 47%);
     /* IE10+ */
+    background: -webkit-linear-gradient(315deg, #52EDC7 0%, #5AC8FB 46%, #5AC8FB 47%);
     background: linear-gradient(135deg, #52EDC7 0%, #5AC8FB 46%, #5AC8FB 47%);
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d51f5e', endColorstr='#db3c56', GradientType=1);
@@ -39,4 +37,16 @@
 
 .tweet-list img{
   border-radius: 5px;
+}
+
+.mymodal {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 15px;
+    width: 90%;
+}
+
+.my-modal iframe{
+    width: 100%;
 }

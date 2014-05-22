@@ -7,6 +7,7 @@ angular.module('ngTwitterApp', [
     'ngRoute',
     'ngTwitterApp.services',
     'ngTwitterApp.filters',
+    'ngTwitterApp.directives',
     'infinite-scroll'
 ])
     .config(function($routeProvider, $locationProvider) {
