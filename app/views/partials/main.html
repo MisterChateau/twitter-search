@@ -30,7 +30,7 @@
                             </div>
                             <div ng-if="!!tweet.entities.urls.length">
                               <button class="btn" ng-click="toggleDisplay()">Display link</button>
-                              <div ng-if="display" display-state="display" link url="{{tweet.entities.urls[0].url}}"></div>
+                              <div ng-if="display" link url="{{tweet.entities.urls[0].url}}"></div>
                             </div>
                             <div class="clearfix"></div>
                         </li>

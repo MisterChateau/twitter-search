@@ -9,9 +9,8 @@ directive('link', function($sce){
 	return{
 		restrict: 'AE',
 		scope: {
-			url: '@url',
-			displaystate: '='
-		},
+			url: '@url'
+			},
 		link: function (scope, element, attribute){
 			scope.url = attribute.url;
 			//set iframe source as a trusted url
@@ -22,7 +21,6 @@ directive('link', function($sce){
     		scope.toggleFrame = function(){
     			console.log("hello");
     			console.log(scope);
-    			scope.displaystate = false;
     		}
 		},
 		template: "<div class="+"my-modal"+"><button ng-click="+"toggleFrame()"+">Close</button><iframe ng-src='{{trustedSrc(url)}}'></iframe></div>"
