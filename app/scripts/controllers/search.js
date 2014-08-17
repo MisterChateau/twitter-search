@@ -38,4 +38,15 @@ angular.module('ngTwitterApp')
                 }
             }
         }
-    });
+})
+.controller('login', function($scope, loginTwitter){
+    $scope.login = function(){
+      // login.query()
+      // .success(function(data){
+      //     console.log(data);
+      //   });
+        console.log(loginTwitter.query()
+        .success(function(data){console.log(data)})
+        .error(function(data){console.log(data)}));
+      }
+});

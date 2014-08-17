@@ -3,17 +3,17 @@
 angular.module('ngTwitterApp.services', []).
 factory('search', function($http) {
     var query = function(keyword, max_id) {
-        
+
         if(max_id === undefined){
             return $http({
                 method: 'GET',
-                url: '/twittersearch/' + keyword
+                url: '/api/twittersearch/' + keyword
             });
         }
         else{
             return $http({
                 method: 'GET',
-                url: '/twittersearch/' + keyword + '/' + max_id
+                url: '/api/twittersearch/' + keyword + '/' + max_id
             });
         }
     }
@@ -23,4 +23,17 @@ factory('search', function($http) {
             return result;
         }
     }
+})
+
+.factory('loginTwitter', function($http) {
+  var login = function() {
+    return $http({method: 'GET', url:'/api/twitterlogin'});
+  }
+  return {
+    query: function() {
+      console.log(login);
+      var result = login();
+      return result;
+    }
+  }
 });

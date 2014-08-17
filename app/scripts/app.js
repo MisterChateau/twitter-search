@@ -16,6 +16,10 @@ angular.module('ngTwitterApp', [
                 templateUrl: 'partials/main',
                 controller: 'search'
             })
+            .when('/login', {
+              templateUrl: 'partials/login',
+              controller: 'login'
+            })
             .otherwise({
                 redirectTo: '/'
             });
