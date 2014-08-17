@@ -2,11 +2,12 @@
   "name": "ngtwitter",
   "version": "0.0.0",
   "dependencies": {
+    "ejs": "~0.8.4",
     "express": "~3.4.3",
     "lodash": "~2.4.1",
-    "ejs": "~0.8.4",
-    "twitter": "^0.2.9",
-    "superagent": "^0.17.0"
+    "node-readability": "^0.3.3",
+    "superagent": "^0.17.0",
+    "twitter": "^0.2.9"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
