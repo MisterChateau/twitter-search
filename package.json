@@ -5,7 +5,6 @@
     "ejs": "~0.8.4",
     "express": "~3.4.3",
     "lodash": "~2.4.1",
-    "node-readability": "^0.3.3",
     "superagent": "^0.17.0",
     "twitter": "^0.2.9"
   },
