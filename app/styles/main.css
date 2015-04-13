@@ -48,6 +48,12 @@
     width: 90%;
     height: 95%;
     z-index: 100;
+	left:	50%;
+	transform: translate(-50%, 0);
+}
+
+.my-modal a {
+	cursor:pointer;
 }
 
 .my-modal iframe{
